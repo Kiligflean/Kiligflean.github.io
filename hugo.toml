@@ -1,5 +1,52 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = 'https://kiligflean.github.io/'
+languageCode = 'zh-cn'
+title = 'Kiligflean | AI Engineer Space'
+theme = 'PaperMod'
 
-theme = "PaperMod"
+# 开启代码高亮
+pygmentsHexColors = true
+pygmentsCCLines = false
+pygmentsStyle = 'monokai'
+
+[params]
+    env = 'production'
+    title = 'Kiligflean'
+    description = '专注 AI Agent 开发、RAG 架构及前沿 AI 应用落地'
+    keywords = ['AI Engineer', 'AI Agent', 'LangChain', 'Java', 'Python']
+    
+    # 允许切换深色/浅色模式
+    defaultTheme = 'auto'
+    disableThemeToggle = false
+    
+    # 显示文章的阅读时间、字数等元数据
+    ShowReadingTime = true
+    ShowShareButtons = true
+    ShowPostNavLinks = true
+    ShowCodeCopyButtons = true
+
+    # ---- 核心：开启 Profile 模式（个人自我介绍主页） ----
+    [params.homeInfoParams]
+        Title = "👋 Hi there, I'm Kilig"
+        Content = "欢迎来到我的技术空间！我是一名TUM cs专业在读本科生。目前专注于使用 LangChain、LangGraph 构建复杂的 **AI Agent 工作流**，深入研究垂直领域的 **RAG（检索增强生成）** 优化，并持续追踪类似 Manus 这样的前沿 AI 落地应用。这里是我技术沉淀与项目踩坑的演练场，我会在这里不定期更新我的学习与实战心得"
+
+    # ---- 添加社交媒体图标（Icon 链接） ----
+    [[params.socialIcons]]
+        name = "github"
+        url = "https://github.com/Kiligflean"
+    [[params.socialIcons]]
+        name = "email"
+        url = "ulyanovvvv@outlook.com" # 记得改成你的真实邮箱
+
+    # ---- 顶部导航栏配置 ----
+    [[params.menu.main]]
+        name = "🔍 技术文章"
+        url = "/posts/"
+        weight = 10
+    [[params.menu.main]]
+        name = "🏷️ 标签"
+        url = "/tags/"
+        weight = 20
+    [[params.menu.main]]
+        name = "🗂️ 归档"
+        url = "/archives/"
+        weight = 30
